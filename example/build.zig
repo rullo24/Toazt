@@ -2,11 +2,14 @@ const std = @import("std");
 
 // building a Windows example executable of Toazt usage
 pub fn build(b: *std.Build) void {
+    const target = b.standardTargetOptions(.{});
+    const optimise = b.standardOptimizeOption(.{});
+
     const exe = b.addExecutable(.{
         .name = "Toazt",
         .root_source_file = b.path("./example.zig"),
-        .target = b.standardTargetOptions(.{}),
-        .optimize = b.standardOptimizeOption(.{}),
+        .target = target,
+        .optimize = optimise,
     });
 
     // linking the toazt code to the example binary --> so that functions can be called by @import()ing
