@@ -3,6 +3,7 @@ A lightweight and simple module for displaying toast notifications in Windows 10
 
 ## Features
 - Native support for Windows 10/11 toast notifications. No dependencies required.
+- Full unicode support
 - Simplistic syntax for creating and pushing toast notifications (2x commands required)
 - Customisable notification properties including: title, message, included icon and show duration (very basic)
 
@@ -85,7 +86,7 @@ pub fn main() !void {
     // creating test notification
     var test_notification: toazt.Notification = toazt.Notification {
         .title = "Example Title",
-        .message = "Test Message!",
+        .message = "Test Message! 😁",
         .icon_loc_abs = "C:\\Windows\\IdentityCRL\\WLive48x48.png",
         .duration = toazt.Duration.short,
     };

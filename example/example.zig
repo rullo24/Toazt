@@ -13,7 +13,7 @@ pub fn main() !void {
     // creating test notification
     var test_notification: toazt.Notification = toazt.Notification {
         .title = "Example Title",
-        .message = "Test Message!",
+        .message = "Test Message! 😁",
         .icon_loc_abs = "C:\\Windows\\IdentityCRL\\WLive48x48.png",
         .duration = toazt.Duration.short,
     };
